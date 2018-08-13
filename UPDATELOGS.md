@@ -1,3 +1,5 @@
+# Discord Fast Food Tool Updatelogs
+
 **Version 0.0.2**
 ```diff
 + Added Toast Notification (on copy)
