@@ -1,0 +1,41 @@
+.navbar {
+    background-color: #7289DA !important
+}
+.dark {
+    background-color: #2C2F33 !important;
+}
+.nav-right {
+    color: #fff
+}
+.nav-right:hover {
+    color: #fff;
+    text-decoration: none
+}
+.jumbotron {
+    background-color: #343a40
+}
+.white {
+    color: #fff
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #343a40;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
