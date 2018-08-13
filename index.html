@@ -8,7 +8,49 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://discordfastfood.com/assets/css/main.css">
     <link rel="stylesheet" href="https://jackbot.js.org/stylesheets/twemoji-awesome.css">
-<style></style></head>
+<style>
+	#toastnotification {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #dddddd;
+    color: #000000;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#toastnotification.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+</style></head>
 <body class="dark">
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
@@ -117,25 +159,25 @@
                       
                     <tr>
                       <th scope="row">Pepperoni</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/KrrU7is">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/aiwAUC">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/ihW54W">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/KrrU7is">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/aiwAUC">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/ihW54W">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Pepperoni+Pizza">All</a> | <a href="https://www.google.co.nz/search?q=Pepperoni+Pizza&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr>
 
                     <tr>
                       <th scope="row">Meat Lovers</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/Fo9iWs">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/i1zkHw">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/1wnMqw">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/Fo9iWs">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/i1zkHw">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/1wnMqw">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Meat+Lovers+Pizza">All</a> | <a href="https://www.google.co.nz/search?q=Meat+Lovers+Pizza&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr>
 
                     <tr>
                       <th scope="row">Hawaiian</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/cXJXDU">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/iE4cjn">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/ZtksXp">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/cXJXDU">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/iE4cjn">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/ZtksXp">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Hawaiian+Pizza">All</a> | <a href="https://www.google.co.nz/search?q=Hawaiian+Pizza&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr>
                   </tbody>
@@ -156,17 +198,17 @@
 
                     <tr>
                       <th scope="row">Cheeseburger</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/A1RBNo">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/x1GJEJ">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/QnyDof">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/A1RBNo">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/x1GJEJ">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/QnyDof">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Cheeseburger">All</a> | <a href="https://www.google.co.nz/search?q=Cheeseburger&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr> 
                       
                     <tr>
                       <th scope="row">Big MAC</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/eVrNEr">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/s5MjtW">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/RTybrE">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/eVrNEr">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/s5MjtW">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/RTybrE">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Big+MAC">All</a> | <a href="https://www.google.co.nz/search?q=Big+MAC&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr> 
                        
@@ -188,17 +230,17 @@
 
                     <tr>
                       <th scope="row">Normal</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/HMFM9y">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/eDZHWy">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/N516cP">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/HMFM9y">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/eDZHWy">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/N516cP">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Fries">All</a> | <a href="https://www.google.co.nz/search?q=Fries&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr> 
                       
                     <tr>
                       <th scope="row">Chicken</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/wFb86L">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/2UR6Ex">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/NjKAiG">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/wFb86L">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/2UR6Ex">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/NjKAiG">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Chicken+Fries">All</a> | <a href="https://www.google.co.nz/search?q=Chicken+Fries&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr> 
                        
@@ -220,17 +262,17 @@
 
                     <tr>
                       <th scope="row">Wedding</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/8nspEZ">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/mdGtE8">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/g2K6ko">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/8nspEZ">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/mdGtE8">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/g2K6ko">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Wedding+Cake">All</a> | <a href="https://www.google.co.nz/search?q=Wedding+Cake&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr> 
                       
                     <tr>
                       <th scope="row">Chocolate</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/uQoeuz">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/gYosbm">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/1A2wM2">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/uQoeuz">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/gYosbm">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/1A2wM2">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Chocolate+Cake">All</a> | <a href="https://www.google.co.nz/search?q=Chocolate+Cake&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr> 
                        
@@ -253,17 +295,17 @@
 
                     <tr>
                       <th scope="row">Coca Cola</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/EgYPb4">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/aTjhBi">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/BjUyh4">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/EgYPb4">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/aTjhBi">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/BjUyh4">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Coca+Cola">All</a> | <a href="https://www.google.co.nz/search?q=Coca+Cola&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr> 
                       
                     <tr>
                       <th scope="row">Milkshake</th>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/DJu8YZ">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/2LoZKZ">Copy</button></td>
-                      <td><button class="btn" data-clipboard-text="https://goo.gl/h8spH7">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/DJu8YZ">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/2LoZKZ">Copy</button></td>
+                      <td><button class="btn" onclick="toastnotification()" data-clipboard-text="https://goo.gl/h8spH7">Copy</button></td>
                       <td><a href="https://www.google.co.nz/search?q=Milkshake">All</a> | <a href="https://www.google.co.nz/search?q=Milkshake&safe=strict&rlz=1C1CHBF_enNZ806NZ806&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiBxrLSq-jcAhWIy7wKHSLNC9cQ_AUICigB&biw=1920&bih=943">Images</a></td>
                     </tr> 
                        
@@ -276,15 +318,22 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.12/clipboard.min.js" integrity="sha384-zD0rXhmVlFWUQYNE6qhnghclEAj+YgdpXMO/izgNBWhg9CZTYfQx/LlgPCUfSH7V" crossorigin="anonymous"></script>
 
+<div id="toastnotification">Copied!</div>
+
 <script>
 var clip = new Clipboard('.btn');
 
 clip.on("success", function() {
-  console.warn("SUCCESS: Copied PP1")
+  console.log("Successfully copied!")
 });
 clip.on("error", function() {
-  console.error("ERROR: I couldn't copy PP1 - Please contact Cairo#4883 ASAP")
+  console.error("I failed whilst copying! Contact Cairo#4883 as soon as possible to resolve this issue!")
 });
+function toastnotification() {
+    var x = document.getElementById("toastnotification");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+};
 </script>
 
 

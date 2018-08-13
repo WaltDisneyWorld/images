@@ -9,3 +9,4 @@ This is a tool for the Discord Fast Food kitchen staff so they can easily handle
 - [Invite the DFF Bot](https://discordapp.com/oauth2/authorize?client_id=435161743183052801&permissions=8&scope=bot)
 - [My DFF Profile](https://discordfastfood.com/user/208105877838888960)
 - [Copier Tool](https://cairo2k18.github.io/)
+- [Update Logs](https://github.com/Cairo2k18/DFF-Image-Link-Tool/blob/master/UPDATELOGS.md)
